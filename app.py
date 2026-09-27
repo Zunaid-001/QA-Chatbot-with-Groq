@@ -18,7 +18,7 @@ prompt = ChatPromptTemplate.from_messages([
     ("user", "Question: {question}")
 ])
 
-llm = ChatGroq(groq_api_key=api_key, model_name="llama-3.3-70b-versatile")  # Groq hosts Gemma models
+llm = ChatGroq(groq_api_key=api_key, model_name="qwen/qwen3.8-27b")  # Groq hosts Gemma models
 output_parser = StrOutputParser()
 chain = prompt | llm | output_parser
 
